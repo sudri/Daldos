@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		946D2C21196720C3002BF8D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D2C20196720C3002BF8D6 /* Foundation.framework */; };
+		946D2C23196720C3002BF8D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D2C22196720C3002BF8D6 /* CoreGraphics.framework */; };
+		946D2C25196720C3002BF8D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D2C24196720C3002BF8D6 /* UIKit.framework */; };
+		946D2C27196720C3002BF8D6 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D2C26196720C3002BF8D6 /* SpriteKit.framework */; };
+		946D2C2D196720C3002BF8D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C2B196720C3002BF8D6 /* InfoPlist.strings */; };
+		946D2C2F196720C3002BF8D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C2E196720C3002BF8D6 /* main.m */; };
+		946D2C33196720C3002BF8D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C32196720C3002BF8D6 /* AppDelegate.m */; };
+		946D2C36196720C3002BF8D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C34196720C3002BF8D6 /* Main.storyboard */; };
+		946D2C39196720C3002BF8D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C38196720C3002BF8D6 /* ViewController.m */; };
+		946D2C40196720C3002BF8D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C3F196720C3002BF8D6 /* Images.xcassets */; };
+		946D2C47196720C3002BF8D6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D2C46196720C3002BF8D6 /* XCTest.framework */; };
+		946D2C48196720C3002BF8D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D2C20196720C3002BF8D6 /* Foundation.framework */; };
+		946D2C49196720C3002BF8D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D2C24196720C3002BF8D6 /* UIKit.framework */; };
+		946D2C51196720C3002BF8D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C4F196720C3002BF8D6 /* InfoPlist.strings */; };
+		946D2C53196720C3002BF8D6 /* DaldosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C52196720C3002BF8D6 /* DaldosTests.m */; };
+		946D2C6019672111002BF8D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C6219672111002BF8D6 /* Localizable.strings */; };
+		946D2C6819672269002BF8D6 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C6719672269002BF8D6 /* Player.m */; };
+		946D2C7019672273002BF8D6 /* Coords.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C6B19672273002BF8D6 /* Coords.m */; };
+		946D2C7119672273002BF8D6 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C6D19672273002BF8D6 /* Dice.m */; };
+		946D2C7219672273002BF8D6 /* NeutralViking.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C6F19672273002BF8D6 /* NeutralViking.m */; };
+		946D2C7A19672288002BF8D6 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C7519672288002BF8D6 /* GameOverScene.m */; };
+		946D2C7B19672288002BF8D6 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C7719672288002BF8D6 /* GameScene.m */; };
+		946D2C7C19672288002BF8D6 /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C7919672288002BF8D6 /* IntroScene.m */; };
+		946D2C8019672292002BF8D6 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C7E19672292002BF8D6 /* spark.png */; };
+		946D2C8119672292002BF8D6 /* Sparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C7F19672292002BF8D6 /* Sparks.sks */; };
+		946D2C871967229B002BF8D6 /* EPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C841967229B002BF8D6 /* EPButton.m */; };
+		946D2C881967229B002BF8D6 /* SKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C861967229B002BF8D6 /* SKButton.m */; };
+		946D2C8D196722B5002BF8D6 /* redViking.png in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C8A196722B5002BF8D6 /* redViking.png */; };
+		946D2C8E196722B5002BF8D6 /* redVikingNoActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C8B196722B5002BF8D6 /* redVikingNoActive.png */; };
+		946D2C8F196722B5002BF8D6 /* whiteViking.png in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C8C196722B5002BF8D6 /* whiteViking.png */; };
+		946D2C91196722C9002BF8D6 /* piece.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C90196722C9002BF8D6 /* piece.aiff */; };
+		946D2C9419672348002BF8D6 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C9319672348002BF8D6 /* GameManager.m */; };
+		946D2C9719672370002BF8D6 /* Viking.m in Sources */ = {isa = PBXBuildFile; fileRef = 946D2C9619672370002BF8D6 /* Viking.m */; };
+		946D2C99196723AF002BF8D6 /* greenViking.png in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C98196723AF002BF8D6 /* greenViking.png */; };
+		946D2C9B196723B5002BF8D6 /* greenVikingNoActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 946D2C9A196723B5002BF8D6 /* greenVikingNoActive.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		946D2C4A196720C3002BF8D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 946D2C15196720C3002BF8D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 946D2C1C196720C3002BF8D6;
+			remoteInfo = Daldos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		946D2C1D196720C3002BF8D6 /* Daldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daldos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		946D2C20196720C3002BF8D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		946D2C22196720C3002BF8D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		946D2C24196720C3002BF8D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		946D2C26196720C3002BF8D6 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		946D2C2A196720C3002BF8D6 /* Daldos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Daldos-Info.plist"; sourceTree = "<group>"; };
+		946D2C2C196720C3002BF8D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		946D2C2E196720C3002BF8D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		946D2C30196720C3002BF8D6 /* Daldos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Daldos-Prefix.pch"; sourceTree = "<group>"; };
+		946D2C31196720C3002BF8D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		946D2C32196720C3002BF8D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		946D2C35196720C3002BF8D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		946D2C37196720C3002BF8D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		946D2C38196720C3002BF8D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		946D2C3F196720C3002BF8D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		946D2C45196720C3002BF8D6 /* DaldosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaldosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		946D2C46196720C3002BF8D6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		946D2C4E196720C3002BF8D6 /* DaldosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DaldosTests-Info.plist"; sourceTree = "<group>"; };
+		946D2C50196720C3002BF8D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		946D2C52196720C3002BF8D6 /* DaldosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaldosTests.m; sourceTree = "<group>"; };
+		946D2C5E19672109002BF8D6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		946D2C5F19672109002BF8D6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		946D2C6119672111002BF8D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		946D2C6319672116002BF8D6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		946D2C6419672122002BF8D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		946D2C6619672269002BF8D6 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		946D2C6719672269002BF8D6 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		946D2C6A19672273002BF8D6 /* Coords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coords.h; sourceTree = "<group>"; };
+		946D2C6B19672273002BF8D6 /* Coords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coords.m; sourceTree = "<group>"; };
+		946D2C6C19672273002BF8D6 /* Dice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
+		946D2C6D19672273002BF8D6 /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
+		946D2C6E19672273002BF8D6 /* NeutralViking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeutralViking.h; sourceTree = "<group>"; };
+		946D2C6F19672273002BF8D6 /* NeutralViking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeutralViking.m; sourceTree = "<group>"; };
+		946D2C7419672288002BF8D6 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		946D2C7519672288002BF8D6 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
+		946D2C7619672288002BF8D6 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		946D2C7719672288002BF8D6 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		946D2C7819672288002BF8D6 /* IntroScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroScene.h; sourceTree = "<group>"; };
+		946D2C7919672288002BF8D6 /* IntroScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroScene.m; sourceTree = "<group>"; };
+		946D2C7E19672292002BF8D6 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		946D2C7F19672292002BF8D6 /* Sparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Sparks.sks; sourceTree = "<group>"; };
+		946D2C831967229B002BF8D6 /* EPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPButton.h; sourceTree = "<group>"; };
+		946D2C841967229B002BF8D6 /* EPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPButton.m; sourceTree = "<group>"; };
+		946D2C851967229B002BF8D6 /* SKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKButton.h; sourceTree = "<group>"; };
+		946D2C861967229B002BF8D6 /* SKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKButton.m; sourceTree = "<group>"; };
+		946D2C8A196722B5002BF8D6 /* redViking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redViking.png; sourceTree = "<group>"; };
+		946D2C8B196722B5002BF8D6 /* redVikingNoActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redVikingNoActive.png; sourceTree = "<group>"; };
+		946D2C8C196722B5002BF8D6 /* whiteViking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteViking.png; sourceTree = "<group>"; };
+		946D2C90196722C9002BF8D6 /* piece.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = piece.aiff; sourceTree = "<group>"; };
+		946D2C9219672348002BF8D6 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		946D2C9319672348002BF8D6 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
+		946D2C9519672370002BF8D6 /* Viking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Viking.h; sourceTree = "<group>"; };
+		946D2C9619672370002BF8D6 /* Viking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Viking.m; sourceTree = "<group>"; };
+		946D2C98196723AF002BF8D6 /* greenViking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenViking.png; sourceTree = "<group>"; };
+		946D2C9A196723B5002BF8D6 /* greenVikingNoActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenVikingNoActive.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		946D2C1A196720C3002BF8D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				946D2C23196720C3002BF8D6 /* CoreGraphics.framework in Frameworks */,
+				946D2C25196720C3002BF8D6 /* UIKit.framework in Frameworks */,
+				946D2C27196720C3002BF8D6 /* SpriteKit.framework in Frameworks */,
+				946D2C21196720C3002BF8D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		946D2C42196720C3002BF8D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				946D2C47196720C3002BF8D6 /* XCTest.framework in Frameworks */,
+				946D2C49196720C3002BF8D6 /* UIKit.framework in Frameworks */,
+				946D2C48196720C3002BF8D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		946D2C14196720C3002BF8D6 = {
+			isa = PBXGroup;
+			children = (
+				946D2C28196720C3002BF8D6 /* Daldos */,
+				946D2C4C196720C3002BF8D6 /* DaldosTests */,
+				946D2C1F196720C3002BF8D6 /* Frameworks */,
+				946D2C1E196720C3002BF8D6 /* Products */,
+				946D2C29196720C3002BF8D6 /* Supporting Files */,
+			);
+			sourceTree = "<group>";
+		};
+		946D2C1E196720C3002BF8D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C1D196720C3002BF8D6 /* Daldos.app */,
+				946D2C45196720C3002BF8D6 /* DaldosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		946D2C1F196720C3002BF8D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C20196720C3002BF8D6 /* Foundation.framework */,
+				946D2C22196720C3002BF8D6 /* CoreGraphics.framework */,
+				946D2C24196720C3002BF8D6 /* UIKit.framework */,
+				946D2C26196720C3002BF8D6 /* SpriteKit.framework */,
+				946D2C46196720C3002BF8D6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		946D2C28196720C3002BF8D6 /* Daldos */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C90196722C9002BF8D6 /* piece.aiff */,
+				946D2C89196722B5002BF8D6 /* Images */,
+				946D2C821967229B002BF8D6 /* View */,
+				946D2C7D19672292002BF8D6 /* Sparks */,
+				946D2C7319672288002BF8D6 /* Scenes */,
+				946D2C6919672273002BF8D6 /* Model */,
+				946D2C6519672269002BF8D6 /* Player */,
+				946D2C31196720C3002BF8D6 /* AppDelegate.h */,
+				946D2C32196720C3002BF8D6 /* AppDelegate.m */,
+				946D2C34196720C3002BF8D6 /* Main.storyboard */,
+				946D2C37196720C3002BF8D6 /* ViewController.h */,
+				946D2C38196720C3002BF8D6 /* ViewController.m */,
+				946D2C6219672111002BF8D6 /* Localizable.strings */,
+			);
+			path = Daldos;
+			sourceTree = "<group>";
+		};
+		946D2C29196720C3002BF8D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C3F196720C3002BF8D6 /* Images.xcassets */,
+				946D2C2A196720C3002BF8D6 /* Daldos-Info.plist */,
+				946D2C2B196720C3002BF8D6 /* InfoPlist.strings */,
+				946D2C2E196720C3002BF8D6 /* main.m */,
+				946D2C30196720C3002BF8D6 /* Daldos-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = Daldos;
+			sourceTree = "<group>";
+		};
+		946D2C4C196720C3002BF8D6 /* DaldosTests */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C52196720C3002BF8D6 /* DaldosTests.m */,
+				946D2C4D196720C3002BF8D6 /* Supporting Files */,
+			);
+			path = DaldosTests;
+			sourceTree = "<group>";
+		};
+		946D2C4D196720C3002BF8D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C4E196720C3002BF8D6 /* DaldosTests-Info.plist */,
+				946D2C4F196720C3002BF8D6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		946D2C6519672269002BF8D6 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C6619672269002BF8D6 /* Player.h */,
+				946D2C6719672269002BF8D6 /* Player.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		946D2C6919672273002BF8D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C9519672370002BF8D6 /* Viking.h */,
+				946D2C9619672370002BF8D6 /* Viking.m */,
+				946D2C9219672348002BF8D6 /* GameManager.h */,
+				946D2C9319672348002BF8D6 /* GameManager.m */,
+				946D2C6A19672273002BF8D6 /* Coords.h */,
+				946D2C6B19672273002BF8D6 /* Coords.m */,
+				946D2C6C19672273002BF8D6 /* Dice.h */,
+				946D2C6D19672273002BF8D6 /* Dice.m */,
+				946D2C6E19672273002BF8D6 /* NeutralViking.h */,
+				946D2C6F19672273002BF8D6 /* NeutralViking.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		946D2C7319672288002BF8D6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C7419672288002BF8D6 /* GameOverScene.h */,
+				946D2C7519672288002BF8D6 /* GameOverScene.m */,
+				946D2C7619672288002BF8D6 /* GameScene.h */,
+				946D2C7719672288002BF8D6 /* GameScene.m */,
+				946D2C7819672288002BF8D6 /* IntroScene.h */,
+				946D2C7919672288002BF8D6 /* IntroScene.m */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		946D2C7D19672292002BF8D6 /* Sparks */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C7E19672292002BF8D6 /* spark.png */,
+				946D2C7F19672292002BF8D6 /* Sparks.sks */,
+			);
+			path = Sparks;
+			sourceTree = "<group>";
+		};
+		946D2C821967229B002BF8D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C831967229B002BF8D6 /* EPButton.h */,
+				946D2C841967229B002BF8D6 /* EPButton.m */,
+				946D2C851967229B002BF8D6 /* SKButton.h */,
+				946D2C861967229B002BF8D6 /* SKButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		946D2C89196722B5002BF8D6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				946D2C8A196722B5002BF8D6 /* redViking.png */,
+				946D2C8B196722B5002BF8D6 /* redVikingNoActive.png */,
+				946D2C8C196722B5002BF8D6 /* whiteViking.png */,
+				946D2C98196723AF002BF8D6 /* greenViking.png */,
+				946D2C9A196723B5002BF8D6 /* greenVikingNoActive.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		946D2C1C196720C3002BF8D6 /* Daldos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 946D2C56196720C3002BF8D6 /* Build configuration list for PBXNativeTarget "Daldos" */;
+			buildPhases = (
+				946D2C19196720C3002BF8D6 /* Sources */,
+				946D2C1A196720C3002BF8D6 /* Frameworks */,
+				946D2C1B196720C3002BF8D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Daldos;
+			productName = Daldos;
+			productReference = 946D2C1D196720C3002BF8D6 /* Daldos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		946D2C44196720C3002BF8D6 /* DaldosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 946D2C59196720C3002BF8D6 /* Build configuration list for PBXNativeTarget "DaldosTests" */;
+			buildPhases = (
+				946D2C41196720C3002BF8D6 /* Sources */,
+				946D2C42196720C3002BF8D6 /* Frameworks */,
+				946D2C43196720C3002BF8D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				946D2C4B196720C3002BF8D6 /* PBXTargetDependency */,
+			);
+			name = DaldosTests;
+			productName = DaldosTests;
+			productReference = 946D2C45196720C3002BF8D6 /* DaldosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		946D2C15196720C3002BF8D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = com.EduardPyatnitsyn;
+				TargetAttributes = {
+					946D2C44196720C3002BF8D6 = {
+						TestTargetID = 946D2C1C196720C3002BF8D6;
+					};
+				};
+			};
+			buildConfigurationList = 946D2C18196720C3002BF8D6 /* Build configuration list for PBXProject "Daldos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = 946D2C14196720C3002BF8D6;
+			productRefGroup = 946D2C1E196720C3002BF8D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				946D2C1C196720C3002BF8D6 /* Daldos */,
+				946D2C44196720C3002BF8D6 /* DaldosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		946D2C1B196720C3002BF8D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				946D2C91196722C9002BF8D6 /* piece.aiff in Resources */,
+				946D2C8019672292002BF8D6 /* spark.png in Resources */,
+				946D2C99196723AF002BF8D6 /* greenViking.png in Resources */,
+				946D2C8119672292002BF8D6 /* Sparks.sks in Resources */,
+				946D2C6019672111002BF8D6 /* Localizable.strings in Resources */,
+				946D2C8D196722B5002BF8D6 /* redViking.png in Resources */,
+				946D2C8E196722B5002BF8D6 /* redVikingNoActive.png in Resources */,
+				946D2C2D196720C3002BF8D6 /* InfoPlist.strings in Resources */,
+				946D2C9B196723B5002BF8D6 /* greenVikingNoActive.png in Resources */,
+				946D2C40196720C3002BF8D6 /* Images.xcassets in Resources */,
+				946D2C36196720C3002BF8D6 /* Main.storyboard in Resources */,
+				946D2C8F196722B5002BF8D6 /* whiteViking.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		946D2C43196720C3002BF8D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				946D2C51196720C3002BF8D6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		946D2C19196720C3002BF8D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				946D2C7119672273002BF8D6 /* Dice.m in Sources */,
+				946D2C7B19672288002BF8D6 /* GameScene.m in Sources */,
+				946D2C871967229B002BF8D6 /* EPButton.m in Sources */,
+				946D2C6819672269002BF8D6 /* Player.m in Sources */,
+				946D2C7019672273002BF8D6 /* Coords.m in Sources */,
+				946D2C39196720C3002BF8D6 /* ViewController.m in Sources */,
+				946D2C33196720C3002BF8D6 /* AppDelegate.m in Sources */,
+				946D2C9719672370002BF8D6 /* Viking.m in Sources */,
+				946D2C7219672273002BF8D6 /* NeutralViking.m in Sources */,
+				946D2C7A19672288002BF8D6 /* GameOverScene.m in Sources */,
+				946D2C9419672348002BF8D6 /* GameManager.m in Sources */,
+				946D2C2F196720C3002BF8D6 /* main.m in Sources */,
+				946D2C7C19672288002BF8D6 /* IntroScene.m in Sources */,
+				946D2C881967229B002BF8D6 /* SKButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		946D2C41196720C3002BF8D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				946D2C53196720C3002BF8D6 /* DaldosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		946D2C4B196720C3002BF8D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 946D2C1C196720C3002BF8D6 /* Daldos */;
+			targetProxy = 946D2C4A196720C3002BF8D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		946D2C2B196720C3002BF8D6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				946D2C2C196720C3002BF8D6 /* en */,
+				946D2C5F19672109002BF8D6 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		946D2C34196720C3002BF8D6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				946D2C35196720C3002BF8D6 /* Base */,
+				946D2C5E19672109002BF8D6 /* ru */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		946D2C4F196720C3002BF8D6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				946D2C50196720C3002BF8D6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		946D2C6219672111002BF8D6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				946D2C6119672111002BF8D6 /* Base */,
+				946D2C6319672116002BF8D6 /* ru */,
+				946D2C6419672122002BF8D6 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		946D2C54196720C3002BF8D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		946D2C55196720C3002BF8D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		946D2C57196720C3002BF8D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Daldos/Daldos-Prefix.pch";
+				INFOPLIST_FILE = "Daldos/Daldos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		946D2C58196720C3002BF8D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Daldos/Daldos-Prefix.pch";
+				INFOPLIST_FILE = "Daldos/Daldos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		946D2C5A196720C3002BF8D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Daldos.app/Daldos";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Daldos/Daldos-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DaldosTests/DaldosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		946D2C5B196720C3002BF8D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Daldos.app/Daldos";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Daldos/Daldos-Prefix.pch";
+				INFOPLIST_FILE = "DaldosTests/DaldosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		946D2C18196720C3002BF8D6 /* Build configuration list for PBXProject "Daldos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				946D2C54196720C3002BF8D6 /* Debug */,
+				946D2C55196720C3002BF8D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		946D2C56196720C3002BF8D6 /* Build configuration list for PBXNativeTarget "Daldos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				946D2C57196720C3002BF8D6 /* Debug */,
+				946D2C58196720C3002BF8D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		946D2C59196720C3002BF8D6 /* Build configuration list for PBXNativeTarget "DaldosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				946D2C5A196720C3002BF8D6 /* Debug */,
+				946D2C5B196720C3002BF8D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 946D2C15196720C3002BF8D6 /* Project object */;
+}
