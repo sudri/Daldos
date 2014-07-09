@@ -116,7 +116,7 @@
 
 -(void) initButtons{
     int fontSize = 30;
-    self.rollP1 = [[EPButton alloc] initWithActiveColor:[SKColor whiteColor] nonActiveColor:[SKColor grayColor]];
+    self.rollP1 = [[EPButton alloc] initWithActiveColor:[SKColor blackColor] nonActiveColor:[SKColor grayColor]];
     self.rollP1.position =  CGPointMake(self.size.width / 2 , self.size.height * 0.25f);
     self.rollP1.fontSize = fontSize;
     self.rollP1.text = NSLocalizedString(@"Roll",nil);
@@ -125,7 +125,7 @@
     [self.rollP1 setTouchUpInsideTarget:self action:@selector(rollPressed)];
     [self addChild:self.rollP1];
     
-    self.rollP2 = [[EPButton alloc] initWithActiveColor:[SKColor whiteColor] nonActiveColor:[SKColor grayColor]];
+    self.rollP2 = [[EPButton alloc] initWithActiveColor:[SKColor blackColor] nonActiveColor:[SKColor grayColor]];
     self.rollP2.position =  CGPointMake(self.size.width / 2 , self.size.height * 0.75f);
     self.rollP2.fontSize = fontSize;
     self.rollP2.text = NSLocalizedString(@"Roll",nil);
@@ -135,7 +135,7 @@
     [self.rollP2 setTouchUpInsideTarget:self action:@selector(rollPressed)];
     [self addChild:self.rollP2];
     
-    self.skipP1 = [[EPButton alloc] initWithActiveColor:[SKColor whiteColor] nonActiveColor:[SKColor grayColor]];
+    self.skipP1 = [[EPButton alloc] initWithActiveColor:[SKColor blackColor] nonActiveColor:[SKColor grayColor]];
     self.skipP1.position =  CGPointMake(self.size.width * 0.2f, self.size.height * 0.25f);
     self.skipP1.fontSize = fontSize;
     self.skipP1.text = NSLocalizedString(@"Skip",nil);
@@ -144,7 +144,7 @@
     [self.skipP1 setTouchUpInsideTarget:self action:@selector(nextTurn)];
     [self addChild:self.skipP1];
     
-    self.skipP2 = [[EPButton alloc] initWithActiveColor:[SKColor whiteColor] nonActiveColor:[SKColor grayColor]];
+    self.skipP2 = [[EPButton alloc] initWithActiveColor:[SKColor blackColor] nonActiveColor:[SKColor grayColor]];
     self.skipP2.position =  CGPointMake(self.size.width * 0.8f, self.size.height * 0.75f);
     self.skipP2.fontSize = fontSize;
     self.skipP2.text = NSLocalizedString(@"Skip",nil);
@@ -225,15 +225,29 @@
 #pragma mark Viking Protocol
 -(void) singleTapOnViking:(id) viking{
     NSLog(@"1Tap");
+    
+    Viking *tappedViking = viking;
+    
     for (NeutralViking *neutral in [self.gameManager neutrals]) {
         [neutral removeFromParent];
     }
     self.gameManager.neutrals = [[NSMutableArray alloc] init];
     [self showBoard];
-    [self setSelectedViking:viking];
-    if ([self.gameManager isCurrentPlayerContainViking:[self selectedViking]] && [self.selectedViking isActive]){
-        [self.gameManager gameBoardVar:[self selectedViking]];
-        [self showBoard];
+    //[self setSelectedViking:viking];
+    if ([self.gameManager isCurrentPlayerContainViking:tappedViking]){
+        if ([tappedViking isActive]){
+            [self.gameManager placeNeutral:tappedViking];
+            [self showBoard];
+        }else{
+            if ([tappedViking isSelected]){
+                [self setSelectedViking:nil];
+                [self doubleTapOnViking:viking];
+            }else{
+                if (self.selectedViking != nil) [self.selectedViking setIsSelected:NO];
+                [self setSelectedViking:tappedViking];
+                [tappedViking setIsSelected:YES];
+            }
+        }
     }
 }
 
@@ -242,6 +256,7 @@
     Viking *tappedViking = viking;
     if ([self.gameManager canActivateViking:tappedViking]){
         [tappedViking setIsActive:true];
+        [tappedViking setIsSelected:NO];
         [self.gameManager.dice removeDiceWithInt:1];
         
         CFBundleRef mainBundle = CFBundleGetMainBundle();
@@ -274,7 +289,8 @@
     NSLog(@"Tap on neutral");
     NeutralViking *tappedViking = viking;
     [self.gameManager killEnemy:tappedViking];
-    [self.selectedViking setCoords:[tappedViking coords]];
+    //[self.selectedViking setCoords:[tappedViking coords]];
+    [tappedViking.viking setCoords:[tappedViking coords]];
     [self.gameManager.dice removeDiceWithInt:[tappedViking usedDice]];
     [self hideDices];
     [self showDices];

@@ -16,14 +16,14 @@
 @property (nonatomic) SKColor *activeColor;
 @property (nonatomic) SKColor *nonActiveColor;
 
--(id) initWithActiveColor:(SKColor *)activeColor nonActiveColor:(SKColor *)nonActiveColor;
-
 @property (nonatomic, readonly) SEL actionTouchUpInside;
 @property (nonatomic, readonly) SEL actionTouchDown;
 @property (nonatomic, readonly) SEL actionTouchUp;
 @property (nonatomic, readonly, weak) id targetTouchUpInside;
 @property (nonatomic, readonly, weak) id targetTouchDown;
 @property (nonatomic, readonly, weak) id targetTouchUp;
+
+-(id) initWithActiveColor:(SKColor *)activeColor nonActiveColor:(SKColor *)nonActiveColor;
 
 
 /** Sets the target-action pair, that is called when the Button is tapped.

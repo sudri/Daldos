@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "Viking.h"
 #import "Coords.h"
 
 @protocol NeutralViking <NSObject>
@@ -19,5 +20,6 @@
 @property id delegate;
 @property (nonatomic) int usedDice;
 @property (nonatomic) Coords* coords;
+@property (nonatomic) Viking* viking;
 
 @end

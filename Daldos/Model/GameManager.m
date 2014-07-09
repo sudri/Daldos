@@ -42,13 +42,13 @@
         turnFlag = YES;
         // green player
         if ([self playerTurn]){
-            if ((tempVikingCoords.y == 0) && (tempVikingCoords.x == 0) && turnFlag) {
+            if ((tempVikingCoords.y == 0) && (tempVikingCoords.x == 0) && turnFlag == YES) {
                 tempVikingCoords.y ++;
                 turnFlag = NO;
             }else if (tempVikingCoords.y == 0) tempVikingCoords.x --;
             
             //дошли до конца средней линии
-            if ((tempVikingCoords.y == 1) && (tempVikingCoords.x > 15)&& turnFlag){
+            if ((tempVikingCoords.y == 1) && (tempVikingCoords.x > 15)&& turnFlag == YES){
                 tempVikingCoords.y--; //переход на 0 линию
                 tempVikingCoords.x = 15;
                 turnFlag = NO;
@@ -92,11 +92,11 @@
 }
 
 
--(void) gameBoardVar:(Viking *)viking{
-    
+-(void) placeNeutral:(Viking *)viking{
     if ( [self.dice firstDice] != 0){
         NeutralViking *neutral = [[NeutralViking alloc] init];
         [neutral setUsedDice:[self.dice firstDice]];
+        [neutral setViking:viking];
         [neutral setCoords:[self tempVikingCoords:viking.coords forDiceValue:[self.dice firstDice]]];
         if ([neutral.coords x] > -1) {
             [self.neutrals addObject:neutral];
@@ -107,6 +107,7 @@
     if ([self.dice secondDice] != 0){
         NeutralViking *neutral = [[NeutralViking alloc] init];
         [neutral setUsedDice:[self.dice secondDice]];
+        [neutral setViking:viking];
         [neutral setCoords:[self tempVikingCoords:viking.coords forDiceValue:[self.dice secondDice]]];
         if ([neutral.coords x] > -1) {
             [self.neutrals addObject:neutral];

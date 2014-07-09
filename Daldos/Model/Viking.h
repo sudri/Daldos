@@ -20,7 +20,8 @@
 
 
 @property id delegate;
-@property (nonatomic) bool isActive;
+@property (nonatomic) BOOL isActive;
+@property (nonatomic) BOOL isSelected;
 @property (nonatomic) UIColor *color;
 @property (nonatomic) Coords *coords;
 

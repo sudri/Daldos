@@ -108,7 +108,7 @@
         if (!_isEnabled) {
             [self setTexture:_disabledTexture];
         } else {
-            [self setTexture:_normalTexture];
+            [self setTexture:[self normalTexture]];
         }
     }
 }
@@ -119,7 +119,7 @@
         if (_isSelected) {
             [self setTexture:_selectedTexture];
         } else {
-            [self setTexture:_normalTexture];
+            [self setTexture:[self normalTexture] ]; 
         }
     }
 }

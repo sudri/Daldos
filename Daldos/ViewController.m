@@ -9,20 +9,32 @@
 #import "ViewController.h"
 #import "GameScene.h"
 #import "GameOverScene.h"
+#import "GameCenterManager.h"
 
-@implementation ViewController
+@implementation ViewController{
+    GameCenterManager *gameCenterManager;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     NSLog(NSLocalizedString(@"language", nil));
+    
+//    if ([GameCenterManager isGameCenterAvailable]){
+//        NSLog(@"Game Center aviable");
+//        gameCenterManager = [GameCenterManager sharedInstance];
+//        gameCenterManager.vc = self;
+//        [gameCenterManager authLocalUser];
+//
+//    }
+    
     // Configure the view.
     SKView * skView =  (SKView *) self.view;
 //    SKView *skView = [[SKView alloc] initWithFrame:self.view.frame];
 //    [self addChildViewController:skView];
     
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
     
     // Create and configure the scene.
     SKScene * gameScene = [GameScene sceneWithSize:skView.bounds.size];
@@ -36,6 +48,9 @@
 //    newScene.scaleMode = SKSceneScaleModeAspectFill;
 //    [skView presentScene:newScene];
 }
+
+
+
 
 - (BOOL)shouldAutorotate
 {
@@ -60,5 +75,6 @@
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
+
 
 @end

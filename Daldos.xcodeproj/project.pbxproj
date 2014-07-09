@@ -61,6 +61,7 @@
 		94914E301967347400630D09 /* vikingShield 1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94914E1D1967347400630D09 /* vikingShield 1024.jpg */; };
 		94914E311967347400630D09 /* vikingShield 600x600.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94914E1E1967347400630D09 /* vikingShield 600x600.jpg */; };
 		94914E321967347400630D09 /* vikingShield 900x900.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94914E1F1967347400630D09 /* vikingShield 900x900.jpg */; };
+		94914E3E19673DAE00630D09 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94914E3D19673DAE00630D09 /* GameCenterManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,8 @@
 		94914E1D1967347400630D09 /* vikingShield 1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vikingShield 1024.jpg"; sourceTree = "<group>"; };
 		94914E1E1967347400630D09 /* vikingShield 600x600.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vikingShield 600x600.jpg"; sourceTree = "<group>"; };
 		94914E1F1967347400630D09 /* vikingShield 900x900.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vikingShield 900x900.jpg"; sourceTree = "<group>"; };
+		94914E3C19673DAE00630D09 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
+		94914E3D19673DAE00630D09 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +213,7 @@
 		946D2C28196720C3002BF8D6 /* Daldos */ = {
 			isa = PBXGroup;
 			children = (
+				94914E35196735B900630D09 /* GameCenter */,
 				946D2C90196722C9002BF8D6 /* piece.aiff */,
 				946D2C31196720C3002BF8D6 /* AppDelegate.h */,
 				946D2C37196720C3002BF8D6 /* ViewController.h */,
@@ -356,6 +360,15 @@
 			path = Icons;
 			sourceTree = SOURCE_ROOT;
 		};
+		94914E35196735B900630D09 /* GameCenter */ = {
+			isa = PBXGroup;
+			children = (
+				94914E3C19673DAE00630D09 /* GameCenterManager.h */,
+				94914E3D19673DAE00630D09 /* GameCenterManager.m */,
+			);
+			path = GameCenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,6 +416,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = com.EduardPyatnitsyn;
 				TargetAttributes = {
+					946D2C1C196720C3002BF8D6 = {
+						DevelopmentTeam = 625W29XED8;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+						};
+					};
 					946D2C44196720C3002BF8D6 = {
 						TestTargetID = 946D2C1C196720C3002BF8D6;
 					};
@@ -486,6 +507,7 @@
 				946D2C7B19672288002BF8D6 /* GameScene.m in Sources */,
 				946D2C871967229B002BF8D6 /* EPButton.m in Sources */,
 				946D2C6819672269002BF8D6 /* Player.m in Sources */,
+				94914E3E19673DAE00630D09 /* GameCenterManager.m in Sources */,
 				946D2C7019672273002BF8D6 /* Coords.m in Sources */,
 				946D2C39196720C3002BF8D6 /* ViewController.m in Sources */,
 				946D2C33196720C3002BF8D6 /* AppDelegate.m in Sources */,
@@ -573,7 +595,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Eduard Pyatnitsyn (625W29XED8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -590,7 +613,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "71DB5C6D-E0BB-4FAC-95BF-93C6250EF52A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -612,7 +636,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Eduard Pyatnitsyn (625W29XED8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -623,6 +648,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "71DB5C6D-E0BB-4FAC-95BF-93C6250EF52A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -634,10 +661,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Daldos/Daldos-Prefix.pch";
 				INFOPLIST_FILE = "Daldos/Daldos-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -648,10 +679,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Daldos/Daldos-Prefix.pch";
 				INFOPLIST_FILE = "Daldos/Daldos-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};

@@ -29,7 +29,7 @@
 
 -(void) nextTurn;
 -(void) killEnemy: (NeutralViking *) neutral;
--(void) gameBoardVar : (Viking *) viking;
+-(void) placeNeutral : (Viking *) viking;
 
 -(Player *) activePlayer;
 -(Coords *) tempVikingCoords:(Coords *) vikingCoords forDiceValue: (int) value;
