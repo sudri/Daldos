@@ -17,7 +17,8 @@
 @end
 
 @interface NeutralViking : SKSpriteNode
-@property id delegate;
+@property (nonatomic,weak) id<NeutralViking> delegate;
+
 @property (nonatomic) int usedDice;
 @property (nonatomic) Coords* coords;
 @property (nonatomic) Viking* viking;

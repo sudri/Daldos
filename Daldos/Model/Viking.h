@@ -19,7 +19,8 @@
 
 
 
-@property id delegate;
+@property (nonatomic, weak) id <Viking> delegate;
+
 @property (nonatomic) BOOL isActive;
 @property (nonatomic) BOOL isSelected;
 @property (nonatomic) UIColor *color;

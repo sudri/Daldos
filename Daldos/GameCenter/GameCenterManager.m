@@ -13,12 +13,16 @@
 @implementation GameCenterManager
 
 static GameCenterManager *sharedManager = nil;
+
 + (GameCenterManager *) sharedInstance {
-    if (!sharedManager) {
-        sharedManager = [[GameCenterManager alloc] init];
-    }
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedManager = [[self alloc] init];
+    });
     return sharedManager;
 }
+
 
 -(id) init{
         if ((self = [super init])) {
@@ -88,7 +92,7 @@ static GameCenterManager *sharedManager = nil;
                 didFailWithError:(NSError *)error
 {
     [self.vc dismissViewControllerAnimated:YES completion:nil];
-    [[[UIAlertView alloc] initWithTitle:@"Error" message:error.description delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 - (void)matchmakerViewController:(GKMatchmakerViewController *)viewController
